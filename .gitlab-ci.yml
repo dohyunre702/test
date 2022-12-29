@@ -9,7 +9,7 @@ package:
   before_script:
     - docker login registry.gitlab.com -u $GITLAB_USER -p $GITLAB_PW
   script:
-    - docker build -t latest registry.gitlab.com/$GITLAB_USER/pipelineprac/$PROJECT_NAME .
+    - docker build -t latest -f registry.gitlab.com/$GITLAB_USER/pipelineprac/$PROJECT_NAME .
     - docker push registry.gitlab.com/$GITLAB_USER/pipelineprac/$PROJECT_NAME
   after_script:
     - docker logout
