@@ -1,0 +1,17 @@
+server:
+  servlet:
+    encoding:
+      force-response: true
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://ec2-3-36-94-179.ap-northeast-2.compute.amazonaws.com/final01
+    username: root
+    password: jl860800**
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
