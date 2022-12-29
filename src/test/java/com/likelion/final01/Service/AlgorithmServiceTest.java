@@ -17,6 +17,6 @@ public class AlgorithmServiceTest {
     @Test
     @DisplayName("자릿수의 합 잘 구하는지 테스트")
     void sumOfDigit() {
-        assertEquals(21, algorithmService.sumOfDigit(687));
+        assertEquals("21", algorithmService.sumOfDigit(687));
     }
 }

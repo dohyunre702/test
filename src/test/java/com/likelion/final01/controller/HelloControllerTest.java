@@ -22,16 +22,14 @@ class HelloControllerTest {
     private MockMvc mockMvc;
     @MockBean
     AlgorithmService algorithmService;
-
-
     @Test
     @WithMockUser
     void sumOfDigit() throws Exception {
         //when. 여기에서 Service는 검증대상이 아님
         when(algorithmService.sumOfDigit(687))
-                .thenReturn(21);
+                .thenReturn("21");
 
-        mockMvc.perform(get("/api/v1/hello/{num}")
+        mockMvc.perform(get("/api/v1/hello/687")
                         .with(csrf()))
                 .andDo(print())
                 .andExpect(status().isOk())
